@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jenna Villasanta — Marketing Operations & Automation Specialist</title>
-  <meta name="description" content="Marketing Operations & Automation Specialist | GHL Expert | AI Agent Builder | Remote — Available AEST" />
+  <meta name="description" content="Marketing Operations & Automation Specialist | GHL Expert | AI Agent Builder | Remote — Open to UK & Global Clients" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
@@ -282,11 +282,11 @@
     }
     .hero-right {
       background: var(--sage-lt);
-      padding: clamp(2.5rem, 5vw, 4rem);
+      padding: clamp(2rem, 4vw, 3.5rem) clamp(2rem, 4vw, 3rem) 5rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 1.2rem;
+      justify-content: flex-end;
+      gap: 1rem;
       position: relative;
       overflow: hidden;
     }
@@ -337,6 +337,92 @@
     }
     .stat-card.green .stat-num { color: var(--forest); }
     .stat-label { font-size: 0.78rem; color: var(--ink-lt); margin-top: 0.2rem; }
+
+    /* Portrait photo in hero */
+    .hero-portrait {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      min-height: 260px;
+    }
+    .hero-portrait img {
+      width: 100%;
+      max-width: 320px;
+      object-fit: contain;
+      object-position: bottom;
+      filter: drop-shadow(0 8px 32px rgba(153,53,86,0.18));
+      transition: transform var(--transition);
+    }
+    .hero-portrait img:hover { transform: scale(1.02); }
+    .hero-stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+
+    /* ============================================================
+       BANNER / ABOUT SECTION
+    ============================================================ */
+    .about-banner {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .about-banner-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('./jenna-banner.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      filter: brightness(0.55);
+      transition: transform 8s ease;
+    }
+    .about-banner:hover .about-banner-bg { transform: scale(1.03); }
+    .about-banner-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(153,53,86,0.72) 0%, rgba(28,26,25,0.6) 60%, rgba(59,109,17,0.45) 100%);
+    }
+    .about-banner-content {
+      position: relative;
+      z-index: 2;
+      padding: clamp(3rem, 7vw, 6rem) clamp(2rem, 7vw, 7rem);
+      max-width: 800px;
+    }
+    .about-banner-content .section-label { color: var(--mint); margin-bottom: 0.75rem; font-size: 1.1rem; }
+    .about-banner-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 1.2rem;
+    }
+    .about-banner-quote em { color: var(--blush-md); font-style: italic; }
+    .about-banner-sub {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 500px;
+      line-height: 1.7;
+    }
+    .about-badge {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: var(--white);
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+    }
 
     /* ============================================================
        IMPACT STRIP
@@ -675,36 +761,43 @@
   <section class="hero">
     <!-- LEFT -->
     <div class="hero-left">
-      <p class="hero-eyebrow slide-in">📍 Philippines &nbsp;·&nbsp; Available AEST (Sydney Time)</p>
+      <p class="hero-eyebrow slide-in">📍 Philippines &nbsp;·&nbsp; Open to UK &amp; Global Remote Clients</p>
       <h1 class="hero-h1 slide-in-2">Marketing <em>Operations</em><br>&amp; Automation<br>Specialist</h1>
       <p class="hero-tagline slide-in-3">GHL Expert · AI Agent Builder · Funnel Architect</p>
-      <p class="hero-p slide-in">I build the systems behind the marketing — automations, funnels, AI agents, and email flows that run while you focus on growing your business. 10+ years spanning enterprise ops and hands-on digital marketing for Australian clients.</p>
+      <p class="hero-p slide-in">I build the systems behind the marketing — automations, funnels, AI agents, and email flows that run while you focus on growing your business. 10+ years spanning enterprise ops and hands-on digital marketing for US, UK, and global clients.</p>
       <div class="hero-btns slide-in-2">
         <a href="#contact" class="btn-primary">Work With Me</a>
         <a href="#results" class="btn-outline">See My Results</a>
       </div>
       <div class="hero-avail slide-in-4">
         <div class="avail-dot"></div>
-        Open to remote freelance &amp; long-term retainer roles
+        Open to remote freelance &amp; long-term retainer roles — UK &amp; global
       </div>
     </div>
     <!-- RIGHT -->
     <div class="hero-right">
-      <div class="stat-card slide-in stagger-1">
-        <div class="stat-num">$80K+</div>
-        <div class="stat-label">Revenue generated via Klaviyo email flows</div>
+      <!-- Portrait Photo -->
+      <div class="hero-portrait slide-in">
+        <img src="./jenna-portrait.png" alt="Jenna Villasanta — Marketing Operations & Automation Specialist" />
       </div>
-      <div class="stat-card green slide-in-2 stagger-2">
-        <div class="stat-num">+304%</div>
-        <div class="stat-label">Accounts reached for pet brand — 33.8K in 30 days</div>
-      </div>
-      <div class="stat-card slide-in-3 stagger-3">
-        <div class="stat-num">$7.48</div>
-        <div class="stat-label">Cost per lead — 6-week men's fitness Meta Ads campaign</div>
-      </div>
-      <div class="stat-card green slide-in-4 stagger-4">
-        <div class="stat-num">10+ yrs</div>
-        <div class="stat-label">Enterprise experience (Verizon, NICE CXone, Accenture)</div>
+      <!-- 2x2 Stat Grid -->
+      <div class="hero-stats-row">
+        <div class="stat-card slide-in-2 stagger-1">
+          <div class="stat-num">$80K+</div>
+          <div class="stat-label">Revenue via Klaviyo flows</div>
+        </div>
+        <div class="stat-card green slide-in-2 stagger-2">
+          <div class="stat-num">+304%</div>
+          <div class="stat-label">Reach growth in 30 days</div>
+        </div>
+        <div class="stat-card slide-in-3 stagger-3">
+          <div class="stat-num">$7.48</div>
+          <div class="stat-label">Cost per lead · Meta Ads</div>
+        </div>
+        <div class="stat-card green slide-in-3 stagger-4">
+          <div class="stat-num">10+ yrs</div>
+          <div class="stat-label">Enterprise experience</div>
+        </div>
       </div>
       <!-- Marquee Tape -->
       <div class="hero-tape">
@@ -753,6 +846,24 @@
       <div class="impact-label">Enterprise & Remote Experience</div>
     </div>
   </div>
+
+  <!-- ===========================
+       BANNER / ABOUT
+  =========================== -->
+  <section class="about-banner">
+    <div class="about-banner-bg"></div>
+    <div class="about-banner-overlay"></div>
+    <div class="about-banner-content fade-up">
+      <span class="section-label">My Philosophy</span>
+      <p class="about-banner-quote">
+        Turn Scattered Marketing Into<br><em>Structured, Measurable Growth.</em>
+      </p>
+      <p class="about-banner-sub">
+        I don't just run campaigns — I build the operational backbone that makes marketing sustainable, scalable, and profitable. Systems first. Growth follows.
+      </p>
+      <span class="about-badge">✦ Est. 2020 · Remote · UK &amp; Global Clients Welcome</span>
+    </div>
+  </section>
 
   <!-- ===========================
        EXPERTISE
@@ -847,7 +958,7 @@
     <div class="section-head fade-up">
       <span class="section-label">Recent Client Work</span>
       <h2>Who I've <em style="font-style:italic;color:var(--rose)">Worked With</em></h2>
-      <p style="margin-top:0.6rem;max-width:500px;">Primarily serving Australian businesses — specialising in beauty, wellness, and service industries.</p>
+      <p style="margin-top:0.6rem;max-width:500px;">Serving US, UK, AU, and global businesses — specialising in beauty, wellness, and service industries.</p>
     </div>
     <div class="clients-list">
 
@@ -907,6 +1018,66 @@
           <p>Full-cycle automation and workflow development, client training sessions, and AI agent builds. Developed conversational AI bots using Closebot, Synthflow, and Rizz Dial — integrated into GHL for 24/7 lead engagement and booking.</p>
           <div class="client-tags">
             <span class="tag">Closebot</span><span class="tag">Synthflow</span><span class="tag">Rizz Dial</span><span class="tag">AI Agents</span><span class="tag">GoHighLevel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="client-card fade-up">
+        <div class="client-left">
+          <div class="client-emoji">🏠</div>
+          <div class="client-name">Virtual Assistant — Real Estate</div>
+          <div class="client-period">June – Dec 2024</div>
+        </div>
+        <div class="client-right">
+          <div class="client-role">Real Estate / Systems Specialist</div>
+          <p>Oversaw operational systems for booking, property management, and communication. Managed short-let property listings across multiple platforms, optimising descriptions and pricing. Handled guest inquiries, coordinated maintenance, and implemented strategies to increase bookings and revenue.</p>
+          <div class="client-tags">
+            <span class="tag">Systems Ops</span><span class="tag">Property Management</span><span class="tag">Short-Let Platforms</span><span class="tag">SOPs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="client-card green fade-up">
+        <div class="client-left">
+          <div class="client-emoji">👗</div>
+          <div class="client-name">Mortimer Apparel</div>
+          <div class="client-period">April – Nov 2024</div>
+        </div>
+        <div class="client-right">
+          <div class="client-role">People Management</div>
+          <p>Supervised and coordinated team members across functions, ensuring collaboration and achievement of objectives. Provided training and mentorship, conducted regular team meetings, managed performance reviews, and oversaw HR functions including payroll, contracts, KPIs, scorecards, and employee handbook.</p>
+          <div class="client-tags">
+            <span class="tag">People Management</span><span class="tag">HR Ops</span><span class="tag">Payroll</span><span class="tag">KPIs</span><span class="tag">Team Leadership</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="client-card fade-up">
+        <div class="client-left">
+          <div class="client-emoji">🎨</div>
+          <div class="client-name">Be Creatives Agency</div>
+          <div class="client-period">April – Oct 2024</div>
+        </div>
+        <div class="client-right">
+          <div class="client-role">Lead SMM</div>
+          <p>Led social media strategy development and implementation. Created platform-specific content, managed content calendars, tracked KPIs (follower growth, engagement, website traffic), and built influencer and strategic partner relationships to amplify brand reach and attract new clients.</p>
+          <div class="client-tags">
+            <span class="tag">Social Media Strategy</span><span class="tag">Content Creation</span><span class="tag">KPI Tracking</span><span class="tag">Influencer Relations</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="client-card green fade-up">
+        <div class="client-left">
+          <div class="client-emoji">🌐</div>
+          <div class="client-name">OLJ Clientele</div>
+          <div class="client-period">2020 – 2022</div>
+        </div>
+        <div class="client-right">
+          <div class="client-role">Operations Management | Lead SMM</div>
+          <p>Served multiple clients across diverse industries via Onlinejobs.ph — Shoe Shop, Cocktail Merchandise, Pet Store, Healing Coach, and Beauty Spa. Handled operations management, social media strategy, lead generation tracking, content creation, community management, and client communication across all accounts.</p>
+          <div class="client-tags">
+            <span class="tag">eCommerce</span><span class="tag">Beauty & Wellness</span><span class="tag">Pet Supplies</span><span class="tag">SMM</span><span class="tag">Lead Gen</span><span class="tag">Community Mgmt</span>
           </div>
         </div>
       </div>
@@ -1009,7 +1180,7 @@
   <section class="contact" id="contact">
     <span class="section-label fade-up">Let's Build Together</span>
     <h2 class="fade-up">Ready to <em>Automate</em><br>&amp; Scale?</h2>
-    <p class="fade-up">Open to remote freelance projects and long-term retainer roles — especially for Australian businesses that want to grow through automation and smart marketing systems.</p>
+    <p class="fade-up">Open to remote freelance projects and long-term retainer roles — working with UK and global businesses that want to grow through automation and smart marketing systems.</p>
     <div class="contact-btns fade-up">
       <a href="mailto:jennavcreates@gmail.com" class="btn-white">📧 Email Me</a>
       <a href="https://www.linkedin.com/in/jennavillasanta" target="_blank" rel="noopener" class="btn-ghost-white">LinkedIn Profile</a>
@@ -1019,7 +1190,7 @@
       <span>·</span>
       <span>📱 +63 917 520 8823</span>
       <span>·</span>
-      <span>🌏 Philippines · AEST Available</span>
+      <span>🌏 Philippines · UK &amp; Global Remote</span>
     </div>
   </section>
 
